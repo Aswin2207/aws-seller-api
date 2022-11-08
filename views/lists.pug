@@ -1,0 +1,14 @@
+link(rel="stylesheet" href="tabulator.min.css")
+script(type='text/javascript' src="tabulator.min.js")
+div.example-table(id="example-table")
+      script.
+
+        var table = new Tabulator("#example-table", {
+          columns:[
+            {title:"Name", field:"name"},
+            {title:"ZIP", field:"zip"}
+          ]
+        });
+
+        //load sample data into the table
+        table.setData(!{JSON.stringify(table_data)});
